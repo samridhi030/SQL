@@ -19,14 +19,15 @@ insert into worker_table VALUES( 108, 'darryl' ,'philbin', 34000 , 'supply chain
 insert into worker_table VALUES( 109, 'roy' ,'anderson', 34000 , 'supply chain', 33);
 insert into worker_table VALUES( 110, 'holly' ,'flax', 65000 , 'hr', 35);
 
-use employee
-1.
- select first_name as worker_name from worker_table
- 
- 2.
- select distinct department from worker_table
- 
- 3.
- select * from worker_table order by empid desc limit 5;
 
+Q-1. Write an SQL query to print the first three characters of  FIRST_NAME from Worker
+table.
+select SUBSTR(first_name, 1,3) from worker_table
 
+Q-2. Write an SQL query to find the position of the alphabet (‘a’) in the first name
+column ‘angela’ from Worker table.
+select INSTR(first_name, BINARY'a') from worker_table where first_name= 'angela';
+
+Q-3. Write an SQL query to print the name of employees having the highest salary in each
+department.
+select first_name, last_name, department, MAX(salary) as salary from worker_table group by department;

@@ -18,15 +18,15 @@ insert into worker_table VALUES( 107, 'toby' ,'flendorson', 60000 , 'hr', 45);
 insert into worker_table VALUES( 108, 'darryl' ,'philbin', 34000 , 'supply chain', 36);
 insert into worker_table VALUES( 109, 'roy' ,'anderson', 34000 , 'supply chain', 33);
 insert into worker_table VALUES( 110, 'holly' ,'flax', 65000 , 'hr', 35);
-
-use employee
 1.
- select first_name as worker_name from worker_table
- 
- 2.
- select distinct department from worker_table
- 
- 3.
- select * from worker_table order by empid desc limit 5;
+select first_name from worker_table
+select replace(first_name, 'a', 'A') from worker_table
+
+2.
+select * from worker_table order by first_name ASC, department DESC
+
+3.
+select first_name, salary From worker_table order by salary DESC
+
 
 

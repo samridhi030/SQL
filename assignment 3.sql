@@ -19,14 +19,12 @@ insert into worker_table VALUES( 108, 'darryl' ,'philbin', 34000 , 'supply chain
 insert into worker_table VALUES( 109, 'roy' ,'anderson', 34000 , 'supply chain', 33);
 insert into worker_table VALUES( 110, 'holly' ,'flax', 65000 , 'hr', 35);
 
-use employee
-1.
- select first_name as worker_name from worker_table
- 
- 2.
- select distinct department from worker_table
- 
- 3.
- select * from worker_table order by empid desc limit 5;
+
+select RTRIM(first_name) from worker_table;
+
+select distinct department, length(department) from worker_table;
+
+select salary from worker_table order by salary desc limit 1;
+
 
 
